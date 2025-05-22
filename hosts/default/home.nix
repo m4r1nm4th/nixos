@@ -45,7 +45,7 @@
     pkgs.htop 
     pkgs.chromium pkgs.firefox pkgs.google-chrome
     pkgs.tmux
-    pkgs.unstable.brave
+    pkgs.brave
     pkgs.libreoffice
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
