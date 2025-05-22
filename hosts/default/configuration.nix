@@ -107,6 +107,9 @@
     users = {
       "marin" = import ./home.nix;
     };
+
+    useGlobalPkgs = true;
+    useUserPackages = true;
   };
 
   # Allow unfree packages
