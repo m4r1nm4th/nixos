@@ -7,6 +7,7 @@
   home.homeDirectory = "/home/marin";
 
   programs = {
+    home-manager.enable = true;
     git = {
       enable = true;
       userName = "m4r1nm4th";
@@ -14,6 +15,13 @@
         extraConfig = {
           core.editor = "vim";
         };
+    };
+    vim = {
+      enable = true;
+      settings = {
+        relativenumber = true;
+        number = true;
+      };
     };
   };
   # This value determines the Home Manager release that your configuration is
@@ -28,6 +36,17 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.unzip
+    pkgs.wget
+    pkgs.vlc
+    pkgs.vscode
+    pkgs.shutter # Screenshots
+    pkgs.zathura # document viewer
+    pkgs.htop 
+    pkgs.chromium pkgs.firefox pkgs.google-chrome
+    pkgs.tmux
+    pkgs.unstable.brave
+    pkgs.libreoffice
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -81,6 +100,4 @@
     # EDITOR = "emacs";
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
