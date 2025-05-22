@@ -28,6 +28,30 @@
       enableAutosuggestions = true;
       enableCompletion = true;
     };
+    vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+        jnoortheen.nix-ide
+        jdinhlife.gruvbox
+        vscodevim.vim
+      ];
+      userSettings = {
+        "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
+        "editor.fontFamily" = "Fira Code";
+        "editor.fontLigatures" = "true";
+        "editor.fontSize" = 16;
+        "workbench.colorTheme" = "Gruvbox Dark Soft";
+        "git.suggestSmartCommit" = true;
+        "vim.smartRelativeLine" = true;
+        "editor.cursorSurroundingLines" = 8;
+        "html.format.wrapLineLength" = 80;
+        "editor.rulers" = [80];
+        "vim.highlightedyank.enable" = true;
+        "vim.highlightedyank.color" = "#a9dc7660";
+        "vim.highlightedyank.duration" = 250;
+        "vim.useSystemClipboard" = true;
+      };
+    };
   };
     gtk = {
       enable = true;
@@ -47,6 +71,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.nixd
     pkgs.unzip
     pkgs.wget
     pkgs.vlc
