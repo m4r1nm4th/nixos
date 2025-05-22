@@ -23,13 +23,13 @@
         number = true;
       };
     };
+  };
     gtk = {
       enable = true;
       theme.name = "adw-gtk3";
-      cursorTheme.name = "Bibata-Modern-Ice";
+      cursorTheme.name = "Bibata-Moder-Ice";
       iconTheme.name = "GruvboxPlus";
     };
-  };
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
