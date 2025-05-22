@@ -23,6 +23,11 @@
         number = true;
       };
     };
+    zsh = {
+      enable = true;
+      enableAutosuggestions = true;
+      enableCompletion = true;
+    };
   };
     gtk = {
       enable = true;
