@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/main-user.nix
-      inputs.home-manager.nixosModules.desktop
+      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.

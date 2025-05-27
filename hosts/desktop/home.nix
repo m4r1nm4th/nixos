@@ -34,6 +34,10 @@
         jnoortheen.nix-ide
         jdinhlife.gruvbox
         vscodevim.vim
+
+        #Python
+        ms-python.python 
+        ms-toolsai.jupyter 
       ];
       userSettings = {
         "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
@@ -56,7 +60,6 @@
     gtk = {
       enable = true;
       theme.name = "adw-gtk3";
-      cursorTheme.name = "Bibata-Moder-Ice";
       iconTheme.name = "GruvboxPlus";
     };
   # This value determines the Home Manager release that your configuration is
@@ -83,6 +86,15 @@
     pkgs.tmux
     pkgs.brave
     pkgs.libreoffice
+
+    # Python Stack 
+    pkgs.python3
+    pkgs.python3Packages.pip 
+    pkgs.python3Packages.ipykernel 
+    pkgs.python3Packages.notebook 
+    pkgs.ruff
+    pkgs.mypy 
+    pkgs.pyright
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
